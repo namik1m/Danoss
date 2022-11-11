@@ -1,0 +1,94 @@
+.videos {
+  margin: 0 auto;
+  max-width: 85%;
+  height: 100%;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.videos img {
+  width: 50%;
+  margin-right: 5%;
+}
+
+[data-scroll-dir-x="1"] .inside {
+  /* opacity: 0.4; */
+  opacity: calc(var(--visible-x) * var(--visible-x));
+  transform: scale(calc(0.5 + calc(var(--visible-x) * 0.5)));
+}
+/*next아이들이 순차적으로 효과*/
+
+[data-scroll-dir-x="-1"] .inside {
+  opacity: calc(var(--visible-x) * var(--visible-x));
+  transform: scale(calc(0.5 + calc(var(--visible-x) * 0.5)));
+}
+
+[data-scroll-dir-x="1"] .special {
+  /* opacity: 0.4; */
+  opacity: calc(var(--visible-x) * var(--visible-x));
+  transform: scale(calc(0.5 + calc(var(--visible-x) * 0.5))) translateY(140px);
+}
+
+.background {
+  position: absolute;
+  /* background-color: bisque; */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  height: auto;
+  /* max-width: 95%; */
+  width: 85%;
+  padding: 10%;
+  /* overflow-y: hidden; */
+  overflow-y: visible;
+  overflow-x: scroll;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: space-between; */
+}
+.top,
+.bottom {
+  width: 100%;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+}
+
+.top {
+  /* transform: translate(-50%, -135%); */
+
+  margin-bottom: 10%;
+  /* background-color: aliceblue; */
+}
+
+.bottom {
+  /* transform: translate(-50%, 60%); */
+  /* background-color: gainsboro; */
+}
+
+.background img {
+  width: 15%;
+  margin-right: 5%;
+}
+
+#b1 {
+  transform: translate(180px, -100px);
+  /* margin-left: 5%; */
+}
+
+#b2 {
+  transform: translate(0, 50px);
+}
+#b3 {
+  transform: translate(100px, 40px);
+}
+#b4 {
+  transform: translate(-100px, 10px);
+}

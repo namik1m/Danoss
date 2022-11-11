@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scroll testout</title>
+    <link rel="stylesheet" type="text/css" media="screen" href="./main.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="./test.css" />
+    <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <div id="menu">
+          <img src="./img/menu.svg" />
+        </div>
+
+        <div id="hiddenmenu">
+          <span id="close">&times;</span>
+          <div id="list">
+            <h1><a href="./about.html">ABOUT</a></h1>
+            <h1><a href="./work.html">WORKS</a></h1>
+            <h1><a href="./contact.html">CONTACT</a></h1>
+          </div>
+        </div>
+
+        <div id="logo">
+          <a href="./index.html"><img src="./img/logo_pre_s_w.svg" /></a>
+        </div>
+
+        <div class="social">
+          <span id="insta">Instagram</span><span>Facebook</span>
+        </div>
+      </header>
+      <!-- <header class="header"><img src="./img/logoex1.png" /></header> -->
+
+      <div class="videos">
+        <img src="./img/d1.png" class="inside" data-scroll />
+        <img src="./img/d2.png" class="inside" data-scroll />
+        <img src="./img/d3.png" class="inside special" data-scroll />
+        <img src="./img/d4.png" class="inside" data-scroll />
+        <img src="./img/d5.png" class="inside special" data-scroll />
+        <img src="./img/d1.png" class="inside" data-scroll />
+      </div>
+
+      <div class="background">
+        <div class="top">
+          <img src="./img/d5.png" class="bck" id="b1" data-scroll />
+          <img src="./img/d4.png" class="bck" id="b2" data-scroll />
+          <img src="./img/d3.png" class="bck" id="b3" data-scroll />
+          <img src="./img/d2.png" class="bck" id="b4" data-scroll />
+        </div>
+
+        <div class="bottom">
+          <img src="./img/d2.png" class="bck" id="b5" data-scroll />
+          <img src="./img/d3.png" class="bck" id="b6" data-scroll />
+          <img src="./img/d5.png" class="bck" id="b7" data-scroll />
+          <img src="./img/d5.png" class="bck" id="b8" data-scroll />
+        </div>
+      </div>
+    </div>
+
+    <script>
+      ScrollOut({
+        scrollingElement: ".videos",
+        targets: ".inside",
+        cssProps: {
+          visibleX: true,
+        },
+      });
+    </script>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
